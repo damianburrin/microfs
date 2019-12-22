@@ -53,8 +53,7 @@ def find_microbit():
     """
     ports = list_serial_ports()
     for port in ports:
-        #if "VID:PID=0D28:0204" in port[2].upper():
-        #added  VID for hifive board
+         #added  VID for hifive board DB 22/12/19
          if "VID:PID=1366:1051" in port[2].upper() or "VID:PID=0D28:0204" in port[2].upper():
             return (port[0], port.serial_number)
     return (None, None)
